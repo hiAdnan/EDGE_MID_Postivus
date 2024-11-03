@@ -1,34 +1,162 @@
 <!-- box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19); -->
 <!DOCTYPE html>
 <html lang="en" data-theme="light">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="CSS/main.css">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="CSS/main.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+    rel="stylesheet">
+  <title>Document</title>
 </head>
-<body>
-  <div class="navbar bg-base-100">
-    <div class="flex-1">
-      <img src="resources/logo-big.png" class="h-7 ml-3" alt="">
+
+<body class="font-inter lg:ml-12">
+  <div class="Hero-page">
+    <div class="Navbar..">
+      <nav class=" flex justify-between md:grid md:grid-cols-3 md:col-span-1 items-center mt-2">
+        <img class="h-10 ml-4" src="resources/logo-big.png" alt="">
+        <!-- dropdown from daisyUI for less then equal small screen -->
+        <div class="md:hidden mr-3 dropdown dropdown-bottom dropdown-end">
+          <div tabindex="0" role="button" class="btn m-1"><svg xmlns="http://www.w3.org/2000/svg" fill="none"
+              viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+            </svg>
+          </div>
+          <ul tabindex="0"
+            class="items-center text-gray-500 font-medium sm:font-semibold sm:text-xl sm:w-40 dropdown-content menu bg-base-100 rounded-box z-[1] w-32 p-2 shadow ">
+            <li><a>About us</a></li>
+            <li><a>Services</a></li>
+            <li><a>Use Cases</a></li>
+            <li><a>Pricing</a></li>
+            <li><a>Blog</a></li>
+          </ul>
+        </div>
+        <!-- dropdown_end -->
+        <div class="hidden md:flex col-span-2 justify-around lg:justify-evenly">
+          <h1 class="py-2">About us</h1>
+          <h1 class="py-2">Services</h1>
+          <h1 class="py-2">Use Cases</h1>
+          <h1 class="py-2">Pricing</h1>
+          <h1 class="py-2">Blog</h1>
+          <h1 class="hidden lg:block border rounded-md border-gray-700 px-4 py-2">Request a quote</h1>
+        </div>
+      </nav>
     </div>
-    <div class="flex-none">
-      <ul class="menu menu-horizontal px-1">
-        <li>
-          <details>
-            <summary><img src="resources/menu-bar.png" class="h-6 w-10 " alt=""></summary>
-            <ul class="bg-base-100 rounded-t-none p-2 w-96">
-              <li><a>About Us</a></li>
-              <li><a>Services</a></li>
-            </ul>
-          </details>
-        </li>
+    <div class="Hero_page_content flex flex-col lg:flex-row lg:mt-16">
+      <div class="Left flex-1">
+        <h1
+          class="ml-5 text-[3rem] sm:text-[3.5rem] md:text-[4rem] lg:text-[5rem] lg:leading-[6rem] lg:mb-7 font-medium ">
+          Navigating the digital landscape for success</h1>
+        <div class="Right lg:hidden flex flex-1 justify-center">
+          <img class=" p-6 " src="resources/cover.png" alt="hero-background">
+        </div>
+        <p class="lg:text-3xl text-lg ml-5 text-black">Our digital marketing agency helps businesses grow and
+          succeed online
+          through
+          a range of services including
+          SEO, PPC, social media marketing, and content creation.</p>
+        <button class="btn bg-black font-normal text-white mx-5 mt-6 w-96 lg:btn-wide hover:bg-gray-800">Book a
+          consultation</button>
+      </div>
+      <div class="Right hidden lg:flex flex-1 justify-center">
+        <img class=" p-6 " src="resources/cover.png" alt="hero-background">
+      </div>
+    </div>
+    <div class="HeroFooter grid grid-cols-2 ml-5 sm:grid-cols-3 lg:flex lg:justify-start gap-28 mt-12">
+      <div>
+        <img src="resources/amazon.png" alt="amazon">
+      </div>
+      <div>
+        <img src="resources/dribble.png" alt="dribble">
+      </div>
+      <div>
+        <img src="resources/hubspot.png" alt="hubspot">
+      </div>
+      <div>
+        <img src="resources/notion.png" alt="notion">
+      </div>
+      <div>
+        <img src="resources/netflix.png" alt="netflix">
+      </div>
+      <div>
+        <img src="resources/zoom.png" alt="zoom">
+      </div>
+    </div>
+  </div>
+  <section class="mt-28 ml-4 h-52">
+    <h1 class="inline-block text-4xl font-semibold rounded-md bg-[#B9ff66] px-4 py-2 mr-8">Case Studies</h1>
+    <p class="inline-block text-xl text-black w-1/2 relative top-2"> Explore Real-Life Examples of Our Proven Digital
+      Marketing Success through Our Case Studies</p>
+  </section>
+  <section>
+    <div class="flex bg-[#191A23] rounded-[3rem] p-6 text-white h-80 ml-6  mr-24 gap-5">
+      <div class="border-r border-white m-9">
+        <p class="text-xl px-8"> For a local restaurant, we implemented a targeted PPC campaign that resulted in a 50%
+          increase in website
+          traffic and a 25% increase in sales</p>
+        <p class="mt-5 text-[#B9ff66] ml-7">Learn more <img class="inline-block pl-3" src="resources/Icon.png"
+            alt="Icon"></p>
+      </div>
+      <div class="border-r border-white m-9 pr-6">
+        <p class="text-xl px-8"> For a B2B software company, we developed an SEO strategy that resulted in a first page
+          ranking for key
+          keywords and a 200% increase in organic traffic.</p>
+        <p class="mt-5 text-[#B9ff66] ml-8">Learn more <img class="inline-block pl-3" src="resources/Icon.png"
+            alt="Icon"></p>
+      </div>
+      <div class="m-9">
+        <p class="text-xl px-8"> For a national retail chain, we created a social media marketing campaign that
+          increased followers by 25%
+          and generated a 20% increase in online sales.</p>
+        <p class="mt-5 text-[#B9ff66] ml-8">Learn more <img class="inline-block pl-3" src="resources/Icon.png"
+            alt="Icon"></p>
+      </div>
+    </div>
+  </section>
+  <section class="mt-28 ml-7 h-52">
+    <h1 class="inline-block text-4xl font-semibold rounded-md bg-[#B9ff66] px-4 py-2 mr-8">Our Working Process</h1>
+    <p class="inline-block text-xl text-black w-80 relative top-2 "> Step-by-Step Guide to Achieving
+      Your Business Goals</p>
+  </section>
+  <section class="space-y-6">
+    <div class="collapse collapse-plus bg-base-300 hover:bg-[#B9ff66] ">
+      <input type="radio" name="my-accordion-3" checked="checked" />
+      <div class="collapse-title text-xl font-medium">Click to open this one and close others</div>
+      <div class="collapse-content">
+        <p>hello</p>
+      </div>
+    </div>
+    <div class="collapse collapse-plus bg-base-300 hover:bg-[#B9ff66] ">
+      <input type="radio" name="my-accordion-3" />
+      <div class="collapse-title text-xl font-medium">Click to open this one and close others</div>
+      <div class="collapse-content">
+        <p>hello</p>
+      </div>
+    </div>
+    <div class="collapse collapse-plus bg-base-300 hover:bg-[#B9ff66] ">
+      <input type="radio" name="my-accordion-3" />
+      <div class="collapse-title text-xl font-medium">Click to open this one and close others</div>
+      <div class="collapse-content">
+        <p>hello</p>
+      </div>
+    </div>
+  </section>
+  <footer class="bg-[#191A23] h-96 mt-14 text-white">
+    <nav>
+      <img src="resources/logo-small.png" alt="">
+      <ul>
+        <li><a>About us</a></li>
+        <li><a>Services</a></li>
+        <li><a>Use Cases</a></li>
+        <li><a>Pricing</a></li>
+        <li><a>Blog</a></li>
       </ul>
-    </div>
-  </div>
-  <div>
-    <p class="w-96 ">Navigating the digital Landscape for success</p>
-    <img src="resources/cover.png" alt="">
-  </div>
+    </nav>
+  </footer>
 </body>
+
 </html>
